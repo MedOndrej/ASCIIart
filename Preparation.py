@@ -1,3 +1,7 @@
+from PIL import Image
+from os import listdir, mkdir
+
+
 def PrepareChars5x7(jmeno, mezX, mezY):
     im = Image.open(jmeno)
     Pixels = im.load()
@@ -13,8 +17,6 @@ def PrepareChars5x7(jmeno, mezX, mezY):
             imnew.save("Characters/ch" + str(x + 13 * y) + ".png")
 
 def Roztrid():
-    from os import listdir, mkdir
-    from PIL import Image
     seznam = listdir("Characters")
 
     for polozka in seznam:
